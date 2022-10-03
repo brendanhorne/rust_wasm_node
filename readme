@@ -1,0 +1,13 @@
+## Install
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add wasm32-unknown-unknown
+cd rust
+cargo build --target wasm32-unknown-unknown --release
+cd ..
+cp rust/target/wasm32-unknown-unknown/release/triple_lib.wasm node/public
+cd node
+npm i
+node rust
+```
