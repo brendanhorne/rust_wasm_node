@@ -11,4 +11,4 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.listen(port, () => console.log(`server running on port ${port}\nhttp://localhost:${port}/`));
 // Auto-open in browser
 var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
-child_process.exec(start + ` http://localhost:${port}/`);
+child_process.exec(start + ` http://localhost:${port}/web_assembly.html`);
